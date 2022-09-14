@@ -1,0 +1,99 @@
+<h1>new listing</h1>
+
+<!-- Nice visual to show @ symbol next to input -->
+<!-- <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroupPrepend3">@</span>
+</div> -->
+
+<div class="table my-5">
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+        <!-- <div class="form-settings"> -->
+
+        <form [formGroup]="formGroup">
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <label for="validateProductName">Product Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="validateProductName" placeholder="Username">
+                        <div *ngIf="form['validateProductName'].touched && form['validateProductName'].invalid"
+                            class="form-control is-invalid">
+                            <div
+                                *ngIf="form['validateProductName'].errors form['validateProductName'].errors['required']">
+                                Please choose a product Name.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="flightNumber">Flight Number</label>
+                    <input type="text" class="form-control" id="flightNumber" formControlName="flightNumber" />
+                    <div *ngIf="form['flightNumber'].touched && form['flightNumber'].invalid" class="alert alert-danger">
+                        <div *ngIf="form['flightNumber'].errors form['flightNumber'].errors['required']">Flight number is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-3">
+                        <label for="validateFirstName">First name</label>
+                        <input type="text" class="form-control is-valid" id="validateFirstName" placeholder="First name"
+                            required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer02">Last name</label>
+                        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name"
+                            value="Otto" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 mb-3">
+                    <label for="validationServer03">City</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer04">State</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid state.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Zip</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="form-check">
+                    <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+                    <label class="form-check-label" for="invalidCheck3">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </form>
+
+        <!-- </div> -->
+    </div>
+</div>
