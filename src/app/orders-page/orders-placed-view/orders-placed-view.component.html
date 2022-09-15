@@ -1,7 +1,7 @@
 <!-- <a href="#" routerLink="/users/index" class="btn btn-primary">&lt;&lt; Back</a> -->
 <h1 class="title">Current Orders Placed</h1>
 
-<div class="container my-5">
+<!-- <div class="container my-5">
     <div class="shadow-lg p-3 mb-5 bg-white rounded">
         <table class="table shadow-4 align-middle mb-0">
             <thead class="bg-light">
@@ -14,12 +14,12 @@
                     <th>Actions</th>
                 </tr>
             </thead>
-            <!-- <tbody>
-            <tr *ngFor="let eachOrder of orders">
-                
-                <td><button (click)="" class="btn btn-success">Fulfill</button></td>
-            </tr>  
-        </tbody> -->
+            <tbody>
+                <tr *ngFor="let eachOrder of orders">
+                    
+                    <td><button (click)="" class="btn btn-success">Fulfill</button></td>
+                </tr>  
+            </tbody>
             <tbody>
                 <tr>
                     <td>
@@ -44,4 +44,38 @@
             </tbody>
         </table>
     </div>
+</div> -->
+
+<div class="container">
+  <div class="card">
+    <p-table [value]="orders" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" responsiveLayout="scroll"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]"> 
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Order Number</th>
+          <th>Email</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Address</th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-order>
+        <tr>
+          <td>{{order.id}}</td>
+          <td>{{order.email}}</td>
+          <td>{{order.price}}</td>
+          <td>{{order.quantity}}</td>
+          <td>{{order.address}}</td>
+          <td><p-button label="Fulfill" (onClick)="fulfill()"></p-button></td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="paginatorleft">
+        <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+      </ng-template>
+      <ng-template pTemplate="paginatorright">
+          <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+      </ng-template>
+    </p-table>
+  </div>
 </div>
