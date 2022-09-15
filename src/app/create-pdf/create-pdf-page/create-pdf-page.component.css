@@ -8,14 +8,16 @@
 }
 
 .table{
-    padding: 0rem 1rem;
-}
-
-/* .container{
     display: flex;
     margin: 5.125rem auto 2rem;
     padding: 0rem 1rem;
-    max-width: 60rem;
+    max-width: 30rem;
     flex-direction: column;
-    align-items: center;
-} */
+    /* align-items: center; */
+    border-spacing: 0;
+}
+
+#USPS{
+    font-size: 2rem;
+    font-weight: bold;
+}

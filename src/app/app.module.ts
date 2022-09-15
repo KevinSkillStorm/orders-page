@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CreatePdfModule } from './create-pdf/create-pdf.module';
 import { NewListingModule } from './new-listing/new-listing.module';
 import { OrdersPageModule } from './orders-page/orders-page.module';
 
@@ -15,7 +16,9 @@ import { OrdersPageModule } from './orders-page/orders-page.module';
     AppRoutingModule,
     OrdersPageModule,
     NewListingModule,
-    HttpClientModule
+    HttpClientModule,
+    CreatePdfModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
