@@ -1,4 +1,4 @@
-.title{
+.title {
     display: flex;
     margin: 5.125rem auto 2rem;
     padding: 0rem 1rem;
@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.table{
+.table {
     display: flex;
     margin: 5.125rem auto 2rem;
     padding: 0rem 1rem;
@@ -17,7 +17,12 @@
     border-spacing: 0;
 }
 
-#USPS{
+#USPS {
     font-size: 2rem;
     font-weight: bold;
+}
+
+img {
+    max-width: 70%;
+    height: auto;
 }

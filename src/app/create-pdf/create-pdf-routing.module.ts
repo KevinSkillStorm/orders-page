@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreatePdfPageComponent } from './create-pdf-page/create-pdf-page.component';
 
 const routes: Routes = [
-  { path: 'orders/create-pdf-page', component: CreatePdfPageComponent }
+  { path: 'orders/create-pdf-page/:id', component: CreatePdfPageComponent }
 ];
 
 @NgModule({

@@ -1,14 +1,12 @@
+<!-- <a href="#" routerLink="/users/index" class="btn btn-primary">&lt;&lt; Home</a> -->
 <div class="title">
-    <h1>create-pdf-page works!</h1>
+    <h1>Order has been fulfilled</h1>
     <button type="onSubmit" (click)="createPdf()">Download Pdf Page</button>
-    <!-- <div id="pdfContentToDownload" #keywordsInput>
-        <p>Kevin</p>
-    </div> -->
 </div>
 
-<div class="container" #keywordsInput>
+<div class="container" #pdfPrint>
     <!-- <div #keywordsInput> -->
-    <table class="table shadow-4 bg-white p-3 my-3 border">
+    <table class="table shadow-4 bg-white p-3 my-3 border" #keywordsInput>
 
         <thead>
             <tr class="d-flex border-bottom">
@@ -24,38 +22,44 @@
                 <div id="USPS">USPS PRIORITY MAIL</div>
                 <br>
             <tr>
-            <tr>
+            <tr class="d-flex justify-content-start">
+                <h4>From:</h4>
+                <br>
+                <br>
+                <br>
+            </tr>
+            <tr class="d-flex justify-content-center">
                 <br>
                 <div>123 Address Street, Atlanta, GA, 20200</div>
                 <br>
+                <br>
+                <br>
 
             </tr>
-            <tr class="d-flex justify-content-center">
+            <tr class="d-flex justify-content-start">
                 <h4>Shipment To:</h4>
                 <br>
                 <br>
                 <br>
             </tr>
-            <tr class="d-flex justify-content-end border-bottom">
+            <tr class="d-flex justify-content-center border-bottom">
                 <br>
                 <br>
                 <br>
-                <div>321 ShipmentAddress Street, New York, NY, 22222</div>
+                <div>{{ address }}</div>
                 <br>
                 <br>
                 <br>
 
             </tr>
-
-            <tr class="d-flex justify-content-center border-bottom">
+            <tr>
                 <br>
-                <br>
-                <br>
-                <h4>Location</h4>
-                <br>
-                <br>
+                <h4>Delivery Confirmation</h4>
                 <br>
             <tr>
+            <tr class="d-flex justify-content-center border-bottom">
+                <img src="/assets/pictures/barcode.jpg" alt="barcode">
+            </tr>
 
         </tbody>
     </table>
